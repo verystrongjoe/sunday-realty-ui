@@ -23,6 +23,11 @@ var columns = [
 ]
 
 var App = React.createClass({
+
+	componentWillMount : function () {
+	},
+
+
 	render: function(){
 		return <DataGrid
 			idProperty='id'
