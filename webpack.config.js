@@ -1,3 +1,6 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
     entry: './src/main.js',
     output: {
@@ -9,11 +12,10 @@ module.exports = {
         loaders: [
             {
             	test: /.jsx?$/,
-                exclude: /node_modules/,
                 loader: 'babel-loader',
+                exclude: /node_modules/,
                 query: {
-                    presets: ["react", "es2015"],
-                    cacheDirectory: false
+                    presets: ["react", "es2015"]
                 }
             }
         ]
