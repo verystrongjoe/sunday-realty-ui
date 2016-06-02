@@ -31,28 +31,30 @@ var columns_ = [
   { name: 'Address'}
 ]
 
-class App extends React.Component {
+var App = React.createClass({
 
-  getInitialState() {
-      return {
-        data_: '',
-      };
-    },
+getInitialState : function() {
+  return { data2: []};
+},
 
-  componentDidMount() {
-      this.serverRequest = $.get("http://localhost:4000/mysql", function (result) {
-        this.setState({
-          data_: result
-        });
-      }.bind(this));
-  },
+componentDidMount : function() {
+    this.serverRequest = $.get("http://localhost:4002/mysql", function (result) {
 
+      console.log(result);
 
+      this.setState({
+        data2 : result
+      });
 
-	render() {
-		return <DataGrid idProperty="id" dataSource={this.state.data} columns={columns} />
+    }.bind(this));
+},
+
+	render  : function() {
+		return (
+      <DataGrid idProperty="id" dataSource={this.state.data2} columns={columns_} />
+    )
 	}
-}
+});
 
 
 ReactDOM.render(<App/>, document.getElementById('table'));
