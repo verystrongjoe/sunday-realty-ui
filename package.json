@@ -1,0 +1,11 @@
+{
+  "name": "sunday-realty-ui",
+  "version": "1.0.0",
+  "description": "sunday-realty-ui is dashboard for realty ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
